@@ -24,7 +24,7 @@ const App = () => {
       text: task,
       completed: false
     }
-    tasks.push(newTask)
+    setTasks([...tasks, newTask])
     console.log(tasks)
   }
 
@@ -52,10 +52,6 @@ const App = () => {
   const filterTasks = (completed) => {
   return tasks.filter(task => task.completed === completed)
 }
-
-  useEffect(()=> {
-    setTasks(tasks)
-  }, [tasks])
 
   return (
     <>

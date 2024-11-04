@@ -7,6 +7,7 @@ const AddTaskForm = ({ allTasks }) => {
     const addTaskFunction = (e) => {
         e.preventDefault()
         allTasks.addTask(input)
+        setInput('')
     }
 
     return (
